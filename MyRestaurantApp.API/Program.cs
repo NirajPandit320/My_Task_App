@@ -1,15 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers(); //prepare the restaurant to use waiters.
+
 var app = builder.Build();
 
-app.MapGet("/api/foods", () =>
-{
-    return new[]
-    {
-        new { Id = 1, Name = "Momo", Price = 150 },
-        new { Id = 2, Name = "Pizza", Price = 300 },
-        new { Id = 3, Name = "Burger", Price = 250 }
-    };
-});
+app.MapControllers(); //tell the restaurant to send customer requests to the appropriate waiter.
 
-app.Run();
+app.Run(); //this is telling the application to start running, like opening the restaurant doors for customers
