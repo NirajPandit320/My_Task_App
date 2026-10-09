@@ -12,13 +12,11 @@ public class FoodController : ControllerBase //inheriting the properties of a co
     {
         _foodService = foodService; //assigning the value of the private variable to the value passed in the constructor
     }
-    [HttpGet] //telling the waiter to get the data
-    public IActionResult GetFoods()
+    [HttpGet] //The waiter receives the request.
+    public IActionResult GetFoods() //The waiter asks the chef for the food list.
     {
-        // var foodService =new FoodService(); //creating an instance of FoodService class
-        var foods =_foodService.GetFoods(); //calling the GetFoods method of FoodService class
-        //returning the data to the user
-        return Ok(foods);
-    }
+        var foods =_foodService.GetFoods(); //The returned list is stored in foods.
+        return Ok(foods); //The waiter sends the list back with 200 OK.
+    } 
 }
 
