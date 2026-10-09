@@ -8,7 +8,7 @@ public class FoodController : ControllerBase //inheriting the properties of a co
 {
 
     private readonly FoodService _foodService; //creating a private variable of type FoodService
-    public FoodController(FoodService foodService) //creating a constructor of the controller class
+    public FoodController(FoodService foodService) //This says the controller needs a FoodService, which .NET provides.
     {
         _foodService = foodService; //assigning the value of the private variable to the value passed in the constructor
     }

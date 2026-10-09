@@ -2,7 +2,7 @@ using MyRestaurantApp.API.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(); //prepare the restaurant to use waiters.
-builder.Services.AddScoped<FoodService>(); //telling the restaurant to use the FoodService class as a waiter
+builder.Services.AddScoped<FoodService>(); //This registers FoodService with .NET's dependency injection system.
 
 var app = builder.Build();
 
