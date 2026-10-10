@@ -6,7 +6,6 @@ namespace MyRestaurantApp.API.Controllers;
 [Route("api/foods")] //telling the waiter where to go. so when the user types /api/foods in the browser, the waiter will come to this controller
 public class FoodController : ControllerBase //inheriting the properties of a controller
 {
-
     private readonly FoodService _foodService; //creating a private variable of type FoodService
     public FoodController(FoodService foodService) //This says the controller needs a FoodService, which .NET provides.
     {
