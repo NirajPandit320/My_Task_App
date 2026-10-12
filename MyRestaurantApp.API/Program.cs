@@ -9,3 +9,4 @@ var app = builder.Build();
 app.MapControllers(); //tell the restaurant to send customer requests to the appropriate waiter.
 
 app.Run(); //this is telling the application to start running, like opening the restaurant doors for customers
+//this is the main entry point of the application. It sets up the web server and starts listening for incoming HTTP requests.
